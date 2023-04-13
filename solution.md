@@ -74,7 +74,7 @@ Poetry is a python package manager. It can be used to create virtual environment
 
 With Poetry and devcontainer you can notice that Dockerfile is not a complex file. In our case we want a generic dockerfile.
 
-### Documentation
+#### Documentation
 Documentation has been created by using `sphinx` python library. The `docs` folder is a generic folder which will be used by `sphinx` to create all needed documentation.
 
 If you are using devcontainer you can re-create documentation executing:
@@ -85,7 +85,7 @@ sphinx-build -b html docs/source/ public
 ```
 `public` folder will be created/updated with documentation which can be uploaded to a web server (i.e. Gitlab Pages)
 
-### Tests
+#### Tests
 
 All tests are placed in `tests` folder. If you are inside devcontainer you can execute tests:
 ```
@@ -94,7 +94,7 @@ pytest
 ```
 You will see test coverage, which is configured by using `setup.cfg` file.
 
-### Code structure
+#### Code structure
 
 Once we have explained all folders and script which support our development let tackle our code structure. All code related to this challenge is placed in `src` folder. There you will find two folders:
 
