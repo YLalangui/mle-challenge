@@ -31,4 +31,4 @@ To create documentation (`index.html` file) please refer to `solution.md` at the
 
 ## Comments
 
-This component has been created to be executed locally (metadata and artifact saved locally), but other tools can be used to track experiments like mlflow or kubeflow pipelines. For that this code has to be refeactor to accept these tools and support cloud-based solution.
+This component has been created to be executed locally (metadata and artifact saved locally), but other tools can be used to track experiments like mlflow or kubeflow pipelines. For that this code has to be refactored to accept these tools and support cloud-based solutions.
