@@ -1,4 +1,5 @@
 import json
+import logging
 import os
 from pathlib import Path
 from typing import NoReturn
@@ -27,6 +28,10 @@ from preprocess import (
     select_columns,
 )
 
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
 
 @click.command()
 @click.option('--read-csv-path', type=str, required=True)
@@ -42,9 +47,12 @@ def preprocess_dataset(
         read_csv_path: dataset path which will be read
         save_csv_path: path to save the preprocessed dataset
     """
+
+    logger.info(f'Creating needed paths to save preprocessed dataset...')
     os.makedirs(Path(save_csv_path).parent.absolute(), exist_ok=True)
     df = pd.read_csv(read_csv_path, storage_options=json.loads(origin_storage_options))
 
+    logger.info(f'Preprocessing data...')
     # Dataset preprocess
     df = create_bathroom_column(df)
 
@@ -60,7 +68,10 @@ def preprocess_dataset(
 
     df = remove_nan_rows(df)
 
+    logger.info(f'Saving preprocessed data...')
     df.to_csv(save_csv_path, storage_options=json.loads(dest_storage_options))
+
+    logger.info(f'Data preprocessed and saved in {save_csv_path}')
 
 
 if __name__ == "__main__":
