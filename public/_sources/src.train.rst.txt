@@ -1,0 +1,18 @@
+src.train package
+=================
+
+.. automodule:: src.train
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   src.train.config
+   src.train.evaluation
+   src.train.main
+   src.train.train

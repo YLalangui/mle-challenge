@@ -1,0 +1,7 @@
+src.train.evaluation module
+===========================
+
+.. automodule:: src.train.evaluation
+   :members:
+   :undoc-members:
+   :show-inheritance:

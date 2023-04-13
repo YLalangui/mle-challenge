@@ -1,0 +1,14 @@
+Pipfile
+*__pycache__*
+.vscode/
+
+# PYTEST
+.pytest_cache
+.coverage
+coverage.xml
+report.xml
+htmlcov
+
+# DOCS
+docs/source/*.rst
+!docs/source/index.rst

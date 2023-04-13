@@ -1,0 +1,7 @@
+src.train.main module
+=====================
+
+.. automodule:: src.train.main
+   :members:
+   :undoc-members:
+   :show-inheritance:

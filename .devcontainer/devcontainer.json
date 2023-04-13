@@ -1,0 +1,40 @@
+{
+    "name": "mle-challenge",
+    "context": "..",
+    "dockerFile": "../Dockerfile",
+    "extensions": [
+		"ms-python.python",
+        "eamodio.gitlens",
+		"ms-python.vscode-pylance",
+		"ms-python.isort",
+		"ms-python.black-formatter"
+	],
+    "settings": {
+		"editor.rulers": [
+			120
+		],
+		"files.trimFinalNewlines": true,
+		"files.trimTrailingWhitespace": true,
+		"files.insertFinalNewline": true,
+		"isort.args": [
+			"--settings-path=/app/pyproject.toml"
+		],
+		"python.formatting.blackArgs": [
+			"--config=/app/pyproject.toml"
+		],
+		"editor.formatOnSave": true,
+		"[python]": {
+			"editor.defaultFormatter": "ms-python.black-formatter",
+			"editor.formatOnSave": true,
+			"editor.codeActionsOnSave": {
+				"source.organizeImports": true
+			}
+		}
+	},
+    "postCreateCommand": "poetry install; echo export PYTHONDONTWRITEBYTECODE=1 >> /root/.bashrc",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind,consistency=delegated",
+    "workspaceFolder": "/app",
+    "mounts": [
+        "source=${localEnv:USERPROFILE}/.gitconfig,target=/etc/gitconfig,type=bind,consistency=delegated"
+    ]
+}
