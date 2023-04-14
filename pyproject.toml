@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "mle-challenge"
+version = "1.0.0"
+description = ""
+authors = [
+    "Sample Fernandez <sample.fernandez@sample.com>"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+uvicorn = "0.21.*"
+fastapi = "0.95.*"
+scikit-learn = "1.2.*"
+
+[tool.poetry.dev-dependencies]
+black = "*"
+isort = "*"
+pytest = "*"
+pytest-cov = "*"
+sphinx = "*"
+sphinxcontrib-napoleon = "*"
+sphinx-rtd-theme = "*"
+myst-parser = "^0.18.0"
+
+[tool.isort]
+profile = "black"
+py_version = 39
+line_length = 120
+
+[tool.black]
+line-length = 120
+target-version = ['py39']
+skip-string-normalization = 1
