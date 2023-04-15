@@ -1,0 +1,7 @@
+category\_prediction.config module
+==================================
+
+.. automodule:: category_prediction.config
+   :members:
+   :undoc-members:
+   :show-inheritance:

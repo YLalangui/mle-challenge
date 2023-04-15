@@ -1,0 +1,7 @@
+src.predictor module
+====================
+
+.. automodule:: src.predictor
+   :members:
+   :undoc-members:
+   :show-inheritance:

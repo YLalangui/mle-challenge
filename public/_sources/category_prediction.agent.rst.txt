@@ -1,0 +1,7 @@
+category\_prediction.agent module
+=================================
+
+.. automodule:: category_prediction.agent
+   :members:
+   :undoc-members:
+   :show-inheritance:

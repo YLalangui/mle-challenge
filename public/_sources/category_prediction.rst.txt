@@ -1,0 +1,18 @@
+category\_prediction package
+============================
+
+.. automodule:: category_prediction
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   category_prediction.agent
+   category_prediction.config
+   category_prediction.listing
+   category_prediction.preprocess

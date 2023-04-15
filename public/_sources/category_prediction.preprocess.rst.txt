@@ -1,0 +1,7 @@
+category\_prediction.preprocess module
+======================================
+
+.. automodule:: category_prediction.preprocess
+   :members:
+   :undoc-members:
+   :show-inheritance:
