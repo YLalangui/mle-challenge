@@ -1,5 +1,7 @@
 from typing import Dict
 
+from fastapi import HTTPException
+
 from category_prediction.listing import ListingInfo
 
 
@@ -26,6 +28,9 @@ def convert_str_to_categorical(listing: Dict, features_str_to_cat: Dict) -> Dict
         Dict: transformed listing
     """
     for key, value in features_str_to_cat.items():
-        listing[key] = value[listing[key]]
+        try:
+            listing[key] = value[listing[key]]
+        except KeyError as e:
+            raise HTTPException(status_code=400, detail=f"{key} field not valid. '{listing[key]}' {key} not supported")
 
     return listing
