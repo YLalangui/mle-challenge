@@ -10,7 +10,7 @@ This folder contains necessary code to preprocess airbnb dataset. The structure 
 
 ## How to execute data transformation
 
-This component can be execute locally or in a Docker container in cloud. As `main.py` is the entrypoint a Docker image can be created from `dataset_preprocess` folder. In this case, four arguments are needed to execute the entry point:
+This component can be executed locally or in a Docker container on cloud. As `main.py` is the entrypoint then a Docker image can be created from `dataset_preprocess` folder. In this case, four arguments are needed to execute the entry point:
 
 - `read-csv-path`: local or remote path (S3, MinIO) where component will get dataset from
 - `save-csv-path`: local or remote path (S3, MinIO) where component will put/save dataset
@@ -31,4 +31,4 @@ To create documentation (`index.html` file) please refer to `solution.md` at the
 
 ## Comments
 
-This component has been created to be executed locally, but it can be seen as a dockerized component in order to take part to a data pipeline. It can be contaneirized and be used as a job in Airflow, Stepfunctions (AWS) or even in a kubeflow pipeline. To do that a Dockerfile has to be created in `dataset_preprocess` and that image has to be uploaded to a Docker Image repository. That repository has to be reachable by cloud/on-premise orchestrator (Airfloe, Stepfunctions, kubeflow pipelines...)
+This component has been created to be executed locally, but it can be seen as a dockerized component in order to take part to a data pipeline. It can be contaneirized and be used as a job in Airflow, Stepfunctions (AWS) or even in a Kubeflow pipeline. To do that, a Dockerfile has to be created in `dataset_preprocess` and that image has to be uploaded to a Docker Image repository. That repository has to be reachable by cloud/on-premise orchestrator (Airflow, Stepfunctions, kubeflow pipelines...)
